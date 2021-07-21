@@ -35,13 +35,11 @@
         <div class="md:w-1/2 mb-10 md:mb-0">
             <h2 class="text-2xl md:text-4xl lg:text-6xl text-white mb-8">Welcome Code Warriors Seeker!</h2>
 
-            <form class="flex flex-col">
-                <input type="text" class="w-full text-gray-500 rounded py-3 px-6 mb-5 outline-none" placeholder="Search Software Engineering Jobs">
-                <input type="text" class="w-full text-gray-500 rounded py-3 px-6 outline-none" placeholder="Location">
-                <br>
-                <div>
-                    <button class="w-36 py-3 px-6 text-lg bg-gray-300 text-gray-600 hover:bg-gray-200 rounded mr-2">Find Job</button>
-                </div>
+            <form id="form" class="flex flex-col">
+                <input id="job" type="text" class="w-full text-gray-500 rounded py-3 px-6 mb-5 outline-none" placeholder="Search Software Engineering Jobs">
+                <input id="location" type="text" class="w-full text-gray-500 rounded py-3 px-6 outline-none" placeholder="Location">
+                    <br>
+                <button id="btn" class="w-36 py-3 px-6 text-lg bg-gray-300 text-gray-600 hover:bg-gray-200 rounded mr-2">Find Job</button>
             </form>
 
         </div>
@@ -52,6 +50,11 @@
         </div>
 
     </div>
+
+<!--result 23 min 7/16 2nd class-->
+    <div id="my-job-result">
+    </div>
+
 
 <!--footer-->
     <div class="p-10 bg-white text-gray-500 flex justify-center">
