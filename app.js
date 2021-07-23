@@ -1485,7 +1485,7 @@ const result = [
 console.log(result)
 
 
-
+// link to html page
 const myResults = document.getElementById('my-job-result');
 
 result.forEach( item => {

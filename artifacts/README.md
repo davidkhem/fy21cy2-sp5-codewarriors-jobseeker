@@ -19,7 +19,7 @@ I sign up with Adzuna to use their job search API. It was a quick process by jus
 Also sign up for Postman inorder to use the API. Figuring out Adzuna API and adding the url into Postman to generate the json file was kind of complicated, because I kept getting the incorrect info. So there was a lot of playing around with the parameters.
 
 The next step is to write out the javascript part. I type out the pseudocode first, so I can figure out my workflow.
-Add the variables, then the event listener, and functions next. Issues that I ran into were linking the API.
+Add the variables, then the event listener, and functions next. Issues that I ran into were grabbing data from the API.
 
 After completion, it was uploaded to GitHub and deployed on Vercel. I made sure the pages are link correctly.
 
