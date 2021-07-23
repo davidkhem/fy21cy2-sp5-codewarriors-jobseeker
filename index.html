@@ -34,10 +34,12 @@
 <!--left search-->
         <div class="md:w-1/2 mb-10 md:mb-0">
             <h2 class="text-2xl md:text-4xl lg:text-6xl text-white mb-8">Welcome Code Warriors Seeker!</h2>
+            <h2 class="text-2xl md:text-4xl lg:text-6xl text-white mb-8">BETA</h2>
+            <h2 class="text-sm md:text-sm text-white mb-8">Search for Software Engineering Jobs in Massachusetts</h2>
 
-            <form id="form" class="flex flex-col">
-                <input id="job" type="text" class="w-full text-gray-500 rounded py-3 px-6 mb-5 outline-none" placeholder="Search Software Engineering Jobs">
-                <input id="location" type="text" class="w-full text-gray-500 rounded py-3 px-6 outline-none" placeholder="Location">
+            <form id="form" onsubmit="return validate()"  class="flex flex-col">
+<!--                <input id="job" type="text" class="w-full text-gray-500 rounded py-3 px-6 mb-5 outline-none" placeholder="Search Software Engineering Jobs">-->
+                <input id="location" type="search" class="w-full text-gray-500 rounded py-3 px-6 outline-none" placeholder="City/Town">
                     <br>
                 <button id="btn" class="w-36 py-3 px-6 text-lg bg-gray-300 text-gray-600 hover:bg-gray-200 rounded mr-2">Find Job</button>
             </form>
@@ -51,18 +53,9 @@
 
     </div>
 
-<!--app.js-->
-<!--<div>-->
-<!--    <h2>Results</h2>-->
-<!--    <p>-->
-<!--        <span id="title"></span>-->
-<!--        <span id="desc"></span>-->
-<!--    </p>-->
-<!--</div>-->
 
-
-<!--result.js-->
-<div id="my-job-result" class="flex flex-col items-center hidden"></div>
+<!--result-->
+    <div id="my-job-result" class="relative flex flex-col items-center hidden"></div>
 
 <!--footer-->
     <div class="p-10 bg-white text-gray-500 flex justify-center">

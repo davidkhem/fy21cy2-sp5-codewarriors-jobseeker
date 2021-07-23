@@ -1,56 +1,28 @@
 // define variables
 
 const btn = document.querySelector('#btn');
-const job = document.querySelector('#job');
+// const job = document.querySelector('#job');
 const city = document.querySelector('#location');
 
 const form = document.querySelector('#form');
 
 const API_KEY = 'f3949be83bb6df9c8ce6f1ed94bd50a4';
-const API_URL = 'https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=aed6ce79&app_key=f3949be83bb6df9c8ce6f1ed94bd50a4';
+const API_URL = 'https://api.adzuna.com/v1/api/jobs/us/search/10?app_id=aed6ce79&app_key=f3949be83bb6df9c8ce6f1ed94bd50a4&results_per_page=50&title_only=software%20engineer';
+
+// Testing another way to grab data from API
+// const apiValue = 'result.json';
+
+// console.log(apiValue)
+
+// fetch(apiValue) // my promise
+//     .then(response => response.json())
+//     .then(item => {
+//         console.log(item.value); // kept getting undefined when checking log
+//     });
 
 
-// event listener
-    btn.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    });
-
-// function
-
-
+// API
 const result = [
-    {
-        "longitude": -71.512802,
-        "created": "2021-06-29T05:51:35Z",
-        "id": "2287685102",
-        "company": {
-            "__CLASS__": "Adzuna::API::Response::Company",
-            "display_name": "IBM Corporation"
-        },
-        "redirect_url": "https://www.adzuna.com/land/ad/2287685102?se=GMTS50Tr6xG9gBXWWoBMgg&utm_medium=api&utm_source=aed6ce79&v=C72D8BB888F058143C85A756F8FC019566EAABF7",
-        "location": {
-            "__CLASS__": "Adzuna::API::Response::Location",
-            "display_name": "Littleton, Middlesex County",
-            "area": [
-                "US",
-                "Massachusetts",
-                "Middlesex County",
-                "Littleton"
-            ]
-        },
-        "latitude": 42.537289,
-        "category": {
-            "tag": "it-jobs",
-            "__CLASS__": "Adzuna::API::Response::Category",
-            "label": "IT Jobs"
-        },
-        "title": "Senior <strong>Software</strong> <strong>Engineer</strong>",
-        "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiR01UUzUwVHI2eEc5Z0JYV1dvQk1nZyIsImkiOiIyMjg3Njg1MTAyIn0.6NWNbcFtZEUwxJr7jawoJ5l7h5TI9b-jFG3u8XmZ8yo",
-        "__CLASS__": "Adzuna::API::Response::Job",
-        "salary_is_predicted": "0",
-        "description": "ENGINEERING Senior Software Engineer, IBM Corporation, Littleton, MA: active involvement in the full-cycle development of software components and technology solutions. Provide expertise in test automation solutions and best practices with an emphasis on implementing continuous integration and delivery. Continually evaluate new technologies and solutions for potential project use. Design and implement solutions for the components related to high availability, storage, and elasticity. Create web …"
-    },
     {
         "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMjMyMTQ5MTI0OSIsInMiOiJHTVRTNTBUcjZ4RzlnQlhXV29CTWdnIn0.McnIHVHXITKqVJTAjxtut8Ylo4042_GjPhFxpg3XPNA",
         "__CLASS__": "Adzuna::API::Response::Job",
@@ -1507,70 +1479,12 @@ const result = [
             "tag": "it-jobs",
             "label": "IT Jobs"
         }
-    },
-    {
-        "id": "2331957777",
-        "created": "2021-07-20T23:34:56Z",
-        "longitude": -71.066119,
-        "category": {
-            "__CLASS__": "Adzuna::API::Response::Category",
-            "tag": "it-jobs",
-            "label": "IT Jobs"
-        },
-        "title": "<strong>Software</strong> <strong>Engineer</strong> in Test",
-        "latitude": 42.354856,
-        "location": {
-            "__CLASS__": "Adzuna::API::Response::Location",
-            "area": [
-                "US",
-                "Massachusetts",
-                "Suffolk County",
-                "Boston"
-            ],
-            "display_name": "Boston, Suffolk County"
-        },
-        "redirect_url": "https://www.adzuna.com/land/ad/2331957777?se=GMTS50Tr6xG9gBXWWoBMgg&utm_medium=api&utm_source=aed6ce79&v=E34F72C8265BBCA46BDAF2118C18911906B2DF57",
-        "company": {
-            "__CLASS__": "Adzuna::API::Response::Company",
-            "display_name": "PEAK Technical Staffing USA"
-        },
-        "adref": "eyJhbGciOiJIUzI1NiJ9.eyJpIjoiMjMzMTk1Nzc3NyIsInMiOiJHTVRTNTBUcjZ4RzlnQlhXV29CTWdnIn0.fzZxIHXWXf3QlK6qvcAQfzCKzqbiwFnK-IiOQnaHxFA",
-        "description": "Posted: 07/01/2021 Employment Type: Direct Placement Category: Software Engineers Job Number: 90274 Job Description In this role, you will be responsible for developing the test automation framework for an inflight connectivity and entertainment solution; to include functional, operational and performance requirements and user interfaces for our internal and external customers. You will work closely with the engineering and automation teams to design and build fully automated testing framework …",
-        "salary_is_predicted": "0",
-        "__CLASS__": "Adzuna::API::Response::Job"
-    },
-    {
-        "location": {
-            "__CLASS__": "Adzuna::API::Response::Location",
-            "display_name": "Cambridge, Middlesex County",
-            "area": [
-                "US",
-                "Massachusetts",
-                "Middlesex County",
-                "Cambridge"
-            ]
-        },
-        "redirect_url": "https://www.adzuna.com/land/ad/2256780831?se=GMTS50Tr6xG9gBXWWoBMgg&utm_medium=api&utm_source=aed6ce79&v=CC43B7287519524608A1A206634CE5AB3D7F1958",
-        "company": {
-            "display_name": "ProQuest",
-            "__CLASS__": "Adzuna::API::Response::Company"
-        },
-        "title": "<strong>Software</strong> <strong>Engineer</strong> Sr",
-        "category": {
-            "label": "IT Jobs",
-            "tag": "it-jobs",
-            "__CLASS__": "Adzuna::API::Response::Category"
-        },
-        "latitude": 42.380327,
-        "created": "2021-06-16T13:54:34Z",
-        "longitude": -71.13891,
-        "id": "2256780831",
-        "__CLASS__": "Adzuna::API::Response::Job",
-        "description": "If you are a job seeker with a disability and require a reasonable accommodation to apply for one of our jobs, you will find the contact information to request the appropriate accommodation by visiting the following page: The ProQuest Mission: Better research. Better learning, Better insights. ProQuest enables people to change their world. ProQuest supports the efforts of students and researchers across the globe. Providing important research tools and curating treasure troves of content has he…",
-        "salary_is_predicted": "0",
-        "adref": "eyJhbGciOiJIUzI1NiJ9.eyJzIjoiR01UUzUwVHI2eEc5Z0JYV1dvQk1nZyIsImkiOiIyMjU2NzgwODMxIn0.Z0VqNBqd8P2X9vgs3kiLQ5Ekv9t1Qn3lZMjJNN6eefM"
     }
 ]
+
+console.log(result)
+
+
 
 const myResults = document.getElementById('my-job-result');
 
@@ -1579,13 +1493,38 @@ result.forEach( item => {
 
     divJobs.innerHTML =
         `<div class="flex justify-center">
-        <div class="w-1/3 h-72 flex flex-col flex justify-center">
-            <h4 class="text-2xl">${item.title}</h4>
-            <p class="mb-2">${item.created}</p>
-            <p class="mb-6">${item.description}</p>
-        </div>
+            <div class="w-1/3 h-52 flex flex-col flex justify-center">
+                <h4 class="text-sm font-bold">${item.title}</h4>
+                <p class="text-sm mb-2">${item.location.display_name}</p>
+                <p class="text-sm mb-2">${item.description}</p>
+                <p class="text-sm mb-4">${item.created}</p>
+            </div>
     </div>`
 
     myResults.appendChild(divJobs)
 
 });
+
+btn.addEventListener('click', () => {
+    myResults.classList.remove('hidden');
+});
+
+
+
+// event listener
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+
+});
+
+
+// adding alert
+function validate() {
+    if(city.value.trim() === '') {
+        alert('Please enter City/Town');
+        return false;
+    } else {
+        return true;
+    }
+}

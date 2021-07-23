@@ -1,6 +1,6 @@
 # Code Warriors Job Seeker
 ## Problem
-New client wants us to build a simple web app that shows the most recent jobs for software engineering jobs in the last 48 hours.
+New client wants me to build a simple web app that shows the most recent jobs for software engineering jobs in the last 48 hours.
 #### Client's Key Criteria
 1. Most recent 10 jobs.
 2. Jobs within the last 48 hours.
